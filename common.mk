@@ -60,7 +60,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ifeq ($(EOS_RELEASE),)
     PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="EOS JDQ39 Nightly $(EOS_BUILD_NUMBER)"
+    BUILD_DISPLAY_ID="KatKiss-JDQ39-$(EOS_BUILD_NUMBER)"
 else
     PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_DISPLAY_ID="EOS Stable release $(EOS_RELEASE)"
@@ -70,17 +70,17 @@ endif
 ## If EOS_RELEASE is not defined by the user, assume the build is a nightly release.
 ## If EOS_RELEASE is defined, use the environment variable EOS_RELEASE_GOOBUILD as the build number.
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.developerid=teameos \
-    ro.goo.board=$(subst full_,,$(TARGET_PRODUCT)) \
+#    ro.goo.developerid=teameos \
+#    ro.goo.board=$(subst full_,,$(TARGET_PRODUCT)) \
 
-ifeq ($(EOS_RELEASE),)
-	PRODUCT_PROPERTY_OVERRIDES += \
+#ifeq ($(EOS_RELEASE),)
+#	PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.rom=eosJB42Nightlies \
 	ro.goo.version=$(shell date +%s)
-else
-	PRODUCT_PROPERTY_OVERRIDES += \
+#else
+#	PRODUCT_PROPERTY_OVERRIDES += \
 	ro.goo.rom=eos \
 	ro.goo.version=$(EOS_RELEASE_GOOBUILD)
-endif
+#endif
 
 $(call inherit-product, vendor/eos/bootanimations/bootanimation.mk)
