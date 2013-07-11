@@ -1,10 +1,10 @@
-=6/17/13 afternoon=
-
-ALL
-
-  • Bug fix - I broke glass but archer100 fixed it for me
-    http://forum.xda-developers.com/showpost.php?p=42675282&postcount=5475
-
+=7/11/13 - V215=
+ - Security fix for Bug 8219321 (Android apk MasterKey exploit)
+ - Browser: Reorg of the pie control + add Go to Bottom/Top of page
+ - Include MediaScanner Filters by default
+ - Rom versions change
+ - Deactivate GooManager versions to avoid notifications of flashing older EOS4 121
+ - Interactive threshold decrease
 
 =6/17/13=
   
