@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012 Team EOS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/org.kat.controlcenter"
+    android:title="@string/eos_interface_navbar" >
+
+    <PreferenceCategory
+        android:key="eos_systemui_mode_category"
+        android:title="@string/eos_systemui_mode_category_title" >
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/systemui_mode_entries"
+            android:entryValues="@array/systemui_mode_values"
+            android:key="eos_systemui_mode"
+            android:summary="@string/eos_interface_systemui_mode_summary"
+            android:title="@string/eos_interface_systemui_mode_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="eos_systemui_expanded_desktop_category"
+        android:title="@string/eos_interface_systemui_expanded_desktop_title" >
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/systemui_expanded_desktop_entries"
+            android:entryValues="@array/systemui_expanded_desktop_values"
+            android:key="eos_interface_enable_expanded_desktop_list"
+            android:summary="@string/eos_interface_systemui_expanded_desktop_summary"
+            android:title="@string/eos_interface_systemui_expanded_desktop_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="eos_navbar_style"
+        android:title="@string/eos_interface_navbar_glass_style_title" >
+        <CheckBoxPreference
+            android:key="eos_interface_navbar_glass_style"
+            android:summary="@string/eos_interface_navbar_glass_style_summary"
+            android:title="@string/eos_interface_navbar_glass_style_title" />
+        <org.kat.controlcenter.GlassDialogPreference
+            android:dependency="eos_interface_navbar_glass_style"
+            android:key="eos_interface_navbar_glass_seekbar"
+            android:summary="@string/eos_interface_navbar_glass_level_summary"
+            android:title="@string/eos_interface_navbar_glass_level_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="eos_navbar_capkey_features"
+        android:title="@string/eos_interface_navbar_category_capkey" >
+    </PreferenceCategory>
+
+</PreferenceScreen>

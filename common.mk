@@ -37,7 +37,7 @@ PRODUCT_PACKAGES += \
     ThemeManager \
     com.tmobile.themes \
     fstrim \
-    EosControlCenter \
+    ControlCenter \
     libnl \
     iw \
     tcpdump \

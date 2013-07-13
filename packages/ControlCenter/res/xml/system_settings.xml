@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/eos_system_settings" >
+
+    <PreferenceScreen
+        android:fragment="org.kat.controlcenter.Performance"
+        android:key="eos_performance_settings"
+        android:title="@string/eos_performance" />
+    
+    <PreferenceScreen
+        android:fragment="org.kat.controlcenter.Privacy"
+        android:key="eos_privacy_settings"
+        android:title="@string/eos_privacy_settings" />
+
+    <Preference
+        android:key="eos_device_settings"
+        android:title="@string/eos_device_settings" >
+        <intent
+            android:action="org.teameos.action.LAUNCH_DEVICE_SETTINGS"
+            android:targetClass="org.teameos.settings.device.DeviceSettings"
+            android:targetPackage="org.teameos.settings.device" />
+    </Preference>
+
+    <PreferenceCategory
+        android:key="eos_system_volume_sound_category"
+        android:title="@string/eos_system_volume_sound_category_title" >
+
+        <CheckBoxPreference
+            android:key="eos_system_volume_keys_rotate"
+            android:summary="@string/eos_system_volume_keys_rotate_description"
+            android:title="@string/eos_system_volume_keys_rotate" />
+
+        <CheckBoxPreference
+            android:key="eos_system_volume_keys_music_control"
+            android:summary="@string/eos_system_volume_keys_music_control_summary"
+            android:title="@string/eos_system_volume_keys_music_control" />
+
+        <ListPreference
+            android:entries="@array/eos_system_default_volume_stream"
+            android:entryValues="@array/eos_system_default_volume_stream_values"
+            android:key="eos_system_default_volume_stream"
+            android:summary="@string/eos_system_volume_default_stream_description"
+            android:title="@string/eos_system_volume_default_stream" >
+        </ListPreference>
+
+        <ListPreference
+            android:entries="@array/volume_control_entries"
+            android:entryValues="@array/volume_control_values"
+            android:defaultValue="1"
+            android:key="eos_system_volume_panel_controls_key"
+            android:summary="@string/eos_system_volume_panel_controls_summary"
+            android:title="@string/eos_system_volume_panel_controls_title" >
+        </ListPreference>
+
+        <CheckBoxPreference
+            android:key="eos_system_volume_link_notification_key"
+            android:summary="@string/eos_system_volume_link_notification_summary"
+            android:title="@string/eos_system_volume_link_notification_title" />
+
+        <CheckBoxPreference
+            android:key="eos_system_volume_hard_button_sounds"
+            android:summary="@string/eos_system_volume_hard_button_sounds_summary"
+            android:title="@string/eos_system_volume_hard_button_sounds_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="eos_system_power_display_category"
+        android:title="@string/eos_system_power_display_category_title" >
+
+        <CheckBoxPreference
+            android:key="eos_system_disable_battery_warning"
+            android:summary="@string/eos_system_disable_battery_warning_summary"
+            android:title="@string/eos_system_disable_battery_warning_title" />
+        <CheckBoxPreference
+            android:key="eos_system_power_unplug_screen_off"
+            android:summary="@string/eos_system_power_unplug_screen_off_summary"
+            android:title="@string/eos_system_power_unplug_screen_off_title" />
+        <CheckBoxPreference
+            android:key="eos_system_power_crt_screen_off"
+            android:summary="@string/eos_system_power_crt_screen_off_summary"
+            android:title="@string/eos_system_power_crt_screen_off_title" />
+        <CheckBoxPreference
+            android:key="eos_system_power_crt_screen_on"
+            android:summary="@string/eos_system_power_crt_screen_on_summary"
+            android:title="@string/eos_system_power_crt_screen_on_title" />
+
+        <ListPreference
+            android:dialogTitle="@string/eos_screenshot_scaling_dialog_title"
+            android:entries="@array/eos_screenshot_scaling_entries"
+            android:entryValues="@array/eos_screenshot_scaling_values"
+            android:key="screenshot_scaling"
+            android:summary="@string/eos_screenshot_scaling_summary"
+            android:title="@string/eos_screenshot_scaling_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="eos_system_network_connectivity_category"
+        android:title="@string/eos_system_network_connectivity_category_title" >
+
+        <EditTextPreference
+            android:key="eos_net_hostname"
+            android:title="@string/eos_net_hostname" />
+
+        <ListPreference
+            android:entries="@array/eos_wifi_regulatory_domain_entries"
+            android:entryValues="@array/eos_wifi_regulatory_domain_values"
+            android:key="eos_wifi_regulatory_domain_selector"
+            android:title="@string/eos_wifi_regulatory_domain_selector" >
+        </ListPreference>
+
+        <ListPreference
+            android:entries="@array/eos_wifi_idle_ms_entries"
+            android:entryValues="@array/eos_wifi_idle_ms_values"
+            android:key="eos_wifi_idle_ms"
+            android:summary="@string/eos_system_wifi_idle_ms_summary"
+            android:title="@string/eos_system_wifi_idle_ms" >
+        </ListPreference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
