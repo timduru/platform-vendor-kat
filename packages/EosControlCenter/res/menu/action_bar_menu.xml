@@ -7,14 +7,14 @@
         android:icon="@drawable/ic_ecc_themes"
         android:title="Themes" />
 
-    <item
+<!--    <item
         android:id="@+id/action_menu_roster"
         android:title="Team roster" />
 
     <item
         android:id="@+id/action_menu_xda"
         android:title="XDA support" />
-    
+--> 
     <item
         android:id="@+id/action_menu_changelog"
         android:title="Changelog" />
