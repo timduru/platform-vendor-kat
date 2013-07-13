@@ -28,6 +28,9 @@ PRODUCT_PACKAGES += \
     ntfs-3g.probe \
     ntfsfix \
     ntfs-3g \
+    fsck.exfat \
+    mount.exfat \
+    mkfs.exfat \
     PhaseBeam \
     HoloSpiral \
     ThemeChooser \
@@ -60,7 +63,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ifeq ($(EOS_RELEASE),)
     PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="KatKiss-JDQ39-$(EOS_BUILD_NUMBER)"
+    BUILD_DISPLAY_ID="JDQ39 KatKiss_$(EOS_BUILD_NUMBER)"
 else
     PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_DISPLAY_ID="EOS Stable release $(EOS_RELEASE)"
