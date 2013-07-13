@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(BOOTANIMATION_RESOLUTION), KatKiss)
+PRODUCT_COPY_FILES += \
+    vendor/eos/bootanimations/KatKiss.zip:system/media/bootanimation.zip
+endif
+
 ifeq ($(BOOTANIMATION_RESOLUTION), 1920x1200)
 PRODUCT_COPY_FILES += \
     vendor/eos/bootanimations/1280x800.zip:system/media/bootanimation.zip
