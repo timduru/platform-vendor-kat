@@ -1,8 +1,13 @@
+=7/14/13 - V217=
+ - Fix Device settings package location
+
 =7/14/13 - V216=
- - Change boot animation + icons + misc
- - Fix zip values signing
- - update ntfs3g, fuse, e2fsprogs
  - Add Exfat filesystem support
+ - update ntfs3g, fuse, e2fsprogs
+ - Fix zip values signing
+ - Change boot animation + icons + misc
+ - Control Center renames & changes
+ - Include KatKernel #104 & KatBoost
 
 =7/11/13 - V215=
  - Security fix for Bug 8219321 (Android apk MasterKey exploit)
