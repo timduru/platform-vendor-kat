@@ -1,7 +1,14 @@
+=7/16/13 - V219=
+ - Add Support for HTTP authentication download in Browser/Download Manager
+ - Ethernet settings & icons support
+ - Settings: Add SuperSU link + move ControlCenter up
+
 =7/15/13 - V218=
 - Fix SystemUI FC on long press settings tile
 - Add Trebuchet
 - Increase Bluetooth A2DP audio quality
+- KillAll: switch back to button + align right 
+- Default to TabletUI
 
 =7/14/13 - V217=
  - Fix Device settings package location
