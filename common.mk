@@ -35,6 +35,7 @@ PRODUCT_PACKAGES += \
     HoloSpiral \
     ThemeChooser \
     ThemeManager \
+    Trebuchet \
     com.tmobile.themes \
     fstrim \
     ControlCenter \
