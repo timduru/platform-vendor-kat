@@ -83,7 +83,7 @@ public class NavigationHandler extends PreferenceScreenHandler {
         int uiVal = Settings.System.getInt(mResolver,
                 EOSConstants.SYSTEMUI_UI_MODE,
                 EOSUtils.isCapKeyDevice(mContext) ? EOSConstants.SYSTEMUI_UI_MODE_NO_NAVBAR
-                        : EOSConstants.SYSTEMUI_UI_MODE_NAVBAR);
+                        : EOSConstants.SYSTEMUI_UI_MODE_SYSTEMBAR);
         mUiMode.setDefaultValue(String.valueOf(uiVal));
         mUiMode.setValue(String.valueOf(uiVal));
         updateUiSummary();
