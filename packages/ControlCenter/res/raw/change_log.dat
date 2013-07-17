@@ -3,6 +3,7 @@
  - Ethernet settings & icons support
  - Settings: Add SuperSU link + move ControlCenter up
  - Update to KatKernel 105 (TF101G boot issue)
+=======
 
 =7/15/13 - V218=
 - Fix SystemUI FC on long press settings tile
