@@ -33,8 +33,8 @@ public class Main extends FragmentActivity
         OnActivityRequestedListener,
         OnMyPageChangedListener {
 
-    private static final String TAG = "EosControlCenter";
-    private static final String TITLE = "EOS Control Center";
+    private static final String TAG = "ControlCenter";
+    private static final String TITLE = "Control Center";
 
     boolean isLargeLandscape;
 
