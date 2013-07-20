@@ -1,9 +1,14 @@
-=7/17/13 - V219=
+=7/20/13 - V221=
+- fix CC path for overclock/zram/privacy scripts
+- Update linaro toolchain + misc compile changes
+- Activate Force overflow menu by default if not set before
+- Switch to ld.gold
+
+=7/17/13 - V220=
  - Add Support for HTTP authentication download in Browser/Download Manager
  - Ethernet settings & icons support
  - Settings: Add SuperSU link + move ControlCenter up
  - Update to KatKernel 105 (TF101G boot issue)
-=======
 
 =7/15/13 - V218=
 - Fix SystemUI FC on long press settings tile
