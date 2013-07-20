@@ -49,7 +49,7 @@ public class InterfaceHandler extends PreferenceScreenHandler {
                 mResolver, EOSConstants.SYSTEMUI_RECENTS_MEM_DISPLAY, 0) == 1);
 
         mMenuOverflow.setChecked(Settings.System.getInt(
-                mResolver, Settings.System.UI_FORCE_OVERFLOW_BUTTON, 0) == 1);
+                mResolver, Settings.System.UI_FORCE_OVERFLOW_BUTTON, 1) == 1);
 
         mShowECCIcon.setChecked(Utils.getComponentEnabledState(mContext, new ComponentName("org.kat.controlcenter",
                 "org.kat.controlcenter.Main-Icon")));
