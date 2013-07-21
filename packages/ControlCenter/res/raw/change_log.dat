@@ -1,8 +1,26 @@
+=7/21/13 - V222=
+ - Perf: Decrease max number of background apps to 20
+ - Perf: Compile & link opt change for ld.gold
+ - Perf: Disable animations by default unless set before
+           (reactivate through Settings => Developper options if you prefer them on)
+         Disable rotation by default
+ - Allow to install non market apps by default
+ - Fixes: 
+    Fix deadlock of WebViewCoreThread
+    Add missing ACTION_MEDIA_UNMOUNTED intent
+    gps: fixed singleshot session that doesn't stop and prevent sleep
+    Fix fatal exception in system process due to NullPointerException.
+    add 1021 gid for gps + 3004 netraw to Init
+    Fix logging typos in GpsLocationProvider
+    Initialize mRotation to panel orientation
+    Fixes the homescreen layout to be prepared based on the panel orientation.
+    Disables the rotation animation from 0 to panel orientation after bootup.
+
 =7/20/13 - V221=
-- fix CC path for overclock/zram/privacy scripts
-- Update linaro toolchain + misc compile changes
-- Activate Force overflow menu by default if not set before
-- Switch to ld.gold
+ - fix CC path for overclock/zram/privacy scripts
+ - Update linaro toolchain + misc compile changes
+ - Activate Force overflow menu by default if not set before
+ - Switch to ld.gold
 
 =7/17/13 - V220=
  - Add Support for HTTP authentication download in Browser/Download Manager
