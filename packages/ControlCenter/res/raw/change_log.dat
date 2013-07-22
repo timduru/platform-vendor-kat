@@ -1,3 +1,6 @@
+=7/22/13 - V223b=
+- Reactivate KatKernel script from original KatKernel zip 
+
 =7/21/13 - V223=
  - Perf: Decrease max number of background apps to 20
  - Perf: Compile & link opt change for ld.gold
