@@ -1,6 +1,8 @@
 =7/24/13 - V224=
- - Fix Polish asusec hardware keyboard layout activation
+ - Fix Polish asusec hardware keyboard layout
  - BT bitrate tweak for better range
+ - Switch to bootanimation by mgeniusm
+ - Add fstrim util in busybox
 
 
 =7/22/13 - V223b=
