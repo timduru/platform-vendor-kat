@@ -23,7 +23,6 @@ PRODUCT_PACKAGES += \
     TerminalEmulator \
     SuperSU \
     GooManager \
-    busybox \
     thtt \
     ntfs-3g.probe \
     ntfsfix \
@@ -33,12 +32,7 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     PhaseBeam \
     HoloSpiral \
-    ThemeChooser \
-    ThemeManager \
-    Trebuchet \
-    com.tmobile.themes \
     fstrim \
-    ControlCenter \
     libnl \
     iw \
     tcpdump \
@@ -46,7 +40,13 @@ PRODUCT_PACKAGES += \
     dropbear \
     scp \
     sftp \
+    Trebuchet \
     ssh-keygen
+    #ControlCenter \
+    #com.tmobile.themes \
+    #ThemeChooser \
+    #ThemeManager \
+    #busybox \
 
 PRODUCT_COPY_FILES += \
     vendor/eos/filesystem_overlay/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
