@@ -33,5 +33,14 @@
         android:key="@string/eos_system"
         android:title="@string/eos_system"
         android:icon="@drawable/ic_ecc_system" />
+    <Preference
+        android:key="eos_device_settings"
+        android:title="@string/eos_device_settings" >
+        <intent
+            android:action="org.autoparts.action.LAUNCH_DEVICE_SETTINGS"
+            android:targetClass="org.autoparts.settings.device.DeviceSettings"
+            android:targetPackage="org.autoparts.settings.device" />
+    </Preference>
+
 
 </PreferenceScreen>
