@@ -1,3 +1,17 @@
+=7/31/13 - V225=
+ - Move ControlCenter System/Device Settings directly into the main Menu under Dock Settings
+ - Cleanup old exfat module
+ - Kernel: Use mmc full block size
+ - Fix Control Center Hardware keyboard layout not changing
+ - ControlCenter: Display changelog link directly on page
+ - Do not turn screen on when unplugging by default
+ - Do not use alpha transformations in transitions unless needed
+ - Add general optimize script: /etc/kat/optimize launching: 
+   - Database optimization: /etc/kat/optimlizedb
+   - Storage optimization (fstrim) : /etc/kat/optimizestorage
+ you can execute it as root with /etc/kat/optimize
+
+
 =7/24/13 - V224=
  - Fix Polish asusec hardware keyboard layout
  - BT bitrate tweak for better range

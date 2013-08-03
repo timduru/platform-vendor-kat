@@ -171,7 +171,7 @@
     <string name="eos_performance_not_applied">Overclocking not applied</string>
     <string name="eos_performance_notification_title">Overclocking</string>
     <string name="eos_performance_notification_text">Values have not been applied due to recent reboot.</string>
-    <string name="eos_device_settings">Device settings</string>
+    <string name="eos_device_settings">Dock settings</string>
     <string name="eos_wifi_regulatory_domain_selector">Change wifi regulatory domain</string>
     <string name="eos_wifi_regulatory_domain_changed">Wifi regulatory domain changed</string>
     <string name="eos_wifi_restarting">Restarting wifi...</string>
