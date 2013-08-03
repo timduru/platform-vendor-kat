@@ -29,15 +29,6 @@
         android:key="eos_privacy_settings"
         android:title="@string/eos_privacy_settings" />
 
-    <Preference
-        android:key="eos_device_settings"
-        android:title="@string/eos_device_settings" >
-        <intent
-            android:action="org.autoparts.action.LAUNCH_DEVICE_SETTINGS"
-            android:targetClass="org.autoparts.settings.device.DeviceSettings"
-            android:targetPackage="org.autoparts.settings.device" />
-    </Preference>
-
     <PreferenceCategory
         android:key="eos_system_volume_sound_category"
         android:title="@string/eos_system_volume_sound_category_title" >

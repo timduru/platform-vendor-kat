@@ -17,6 +17,7 @@
 --> 
     <item
         android:id="@+id/action_menu_changelog"
+        android:showAsAction="ifRoom"
         android:title="Changelog" />
 
 </menu> 
