@@ -51,7 +51,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/eos/filesystem_overlay/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
     vendor/eos/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
-    vendor/eos/proprietary/supersu/su:system/xbin/su \
 
 PRODUCT_COPY_FILES += \
     vendor/eos/proprietary/supersu/su:system/xbin/su \
