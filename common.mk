@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     scp \
     sftp \
     Trebuchet \
+    libbt-vendor \
     ssh-keygen
     #ControlCenter \
     #com.tmobile.themes \
