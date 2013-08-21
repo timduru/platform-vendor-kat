@@ -1,11 +1,9 @@
 #!/system/bin/sh
 
-# set boot values for eos kernel controls
-
 # ZRAM allocate 10% of device memory
 # credit Imoseyon
 
-if [ -e /data/data/org.kat.controlcenter/app_eos/zram_on_boot ]; then
+if [ -e /data/data/com.android.settings/app_kk/zram_on_boot ]; then
     RAMSIZE=`grep MemTotal /proc/meminfo | awk '{ print \$2 }'`
     ZRAMSIZE=$(($RAMSIZE*100))
 
@@ -29,12 +27,12 @@ for x in $files; do
     chgrp system $x
 done
 
-if [ -e /data/data/org.kat.controlcenter/app_eos/clocks_on_boot ]; then
-    thtt /data/local/eos_clocking
+if [ -e /data/data/com.android.settings/app_kk/clocks_on_boot ]; then
+    thtt /data/local/kk_clocking
     TEST_VALUE=$?
 
     if [ ! $TEST_VALUE -eq 0 ]; then
-        setprop eos.overclocking.failed 1
+        setprop kk.overclocking.failed 1
     fi;
 fi
 
