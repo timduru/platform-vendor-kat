@@ -50,14 +50,12 @@ PRODUCT_PACKAGES += \
     #busybox \
 
 PRODUCT_COPY_FILES += \
-    vendor/eos/filesystem_overlay/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml \
     vendor/eos/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
 
 PRODUCT_COPY_FILES += \
     vendor/eos/proprietary/supersu/su:system/xbin/su \
     vendor/eos/proprietary/supersu/daemonsu:system/xbin/daemonsu \
     vendor/eos/proprietary/supersu/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-
 
 #Bring in camera media effects
 $(call inherit-product-if-exists, frameworks/base/data/videos/VideoPackage2.mk)
