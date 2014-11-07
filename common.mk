@@ -17,7 +17,7 @@
 # This file includes all definitions that apply to ALL eos builds
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.adb.secure=1
+    ro.adb.secure=0
 
 PRODUCT_PACKAGES += \
     TerminalEmulator \
@@ -27,34 +27,34 @@ PRODUCT_PACKAGES += \
     ntfs-3g.probe \
     ntfsfix \
     ntfs-3g \
-    fsck.exfat \
-    mount.exfat \
-    mkfs.exfat \
     PhaseBeam \
     HoloSpiral \
     fstrim \
     libnl \
     iw \
     tcpdump \
-    powertop \
     dropbear \
     scp \
     sftp \
-    Trebuchet \
+    Launcher3 \
     libbt-vendor \
-    ssh-keygen
+    fsck.exfat \
+    mount.exfat \
+    mkfs.exfat \
+    busybox \
+    #ssh-keygen
+    #powertop \
     #ControlCenter \
     #com.tmobile.themes \
     #ThemeChooser \
     #ThemeManager \
-    #busybox \
 
 PRODUCT_COPY_FILES += \
     vendor/eos/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
 
 PRODUCT_COPY_FILES += \
     vendor/eos/proprietary/supersu/su:system/xbin/su \
-    vendor/eos/proprietary/supersu/daemonsu:system/xbin/daemonsu \
+    vendor/eos/proprietary/supersu/su:system/xbin/daemonsu \
     vendor/eos/proprietary/supersu/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
 
 #Bring in camera media effects
@@ -62,9 +62,6 @@ $(call inherit-product-if-exists, frameworks/base/data/videos/VideoPackage2.mk)
 
 $(call inherit-product-if-exists, vendor/eos/filesystem_overlay/overlay.mk)
 DEVICE_PACKAGE_OVERLAYS += vendor/eos/resource_overlay
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.eos.majorversion=3
 
 ifeq ($(EOS_RELEASE),)
     PRODUCT_BUILD_PROP_OVERRIDES += \
