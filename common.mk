@@ -45,17 +45,13 @@ PRODUCT_PACKAGES += \
     #ssh-keygen
     #powertop \
     #ControlCenter \
+    #Trebuchet \
     #com.tmobile.themes \
     #ThemeChooser \
     #ThemeManager \
 
 PRODUCT_COPY_FILES += \
     vendor/eos/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
-
-PRODUCT_COPY_FILES += \
-    vendor/eos/proprietary/supersu/su:system/xbin/su \
-    vendor/eos/proprietary/supersu/su:system/xbin/daemonsu \
-    vendor/eos/proprietary/supersu/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
 
 #Bring in camera media effects
 $(call inherit-product-if-exists, frameworks/base/data/videos/VideoPackage2.mk)
