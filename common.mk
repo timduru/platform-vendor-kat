@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-# This file includes all definitions that apply to ALL eos builds
+# This file includes all definitions that apply to ALL builds
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0
@@ -22,7 +22,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     TerminalEmulator \
     SuperSU \
-    GooManager \
     thtt \
     ntfs-3g.probe \
     ntfsfix \
@@ -51,37 +50,18 @@ PRODUCT_PACKAGES += \
     #ThemeManager \
 
 PRODUCT_COPY_FILES += \
-    vendor/eos/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+    vendor/kat/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
 
 #Bring in camera media effects
 $(call inherit-product-if-exists, frameworks/base/data/videos/VideoPackage2.mk)
 
-$(call inherit-product-if-exists, vendor/eos/filesystem_overlay/overlay.mk)
-DEVICE_PACKAGE_OVERLAYS += vendor/eos/resource_overlay
+$(call inherit-product-if-exists, vendor/kat/filesystem_overlay/overlay.mk)
+DEVICE_PACKAGE_OVERLAYS += vendor/kat/resource_overlay
 
-ifeq ($(EOS_RELEASE),)
     PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="$(BUILD_ID) KatKiss-$(PLATFORM_VERSION)_$(EOS_BUILD_NUMBER)"
-else
-    PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="KatKiss Stable release $(EOS_RELEASE)"
+    BUILD_DISPLAY_ID="$(BUILD_ID) KatKiss-$(PLATFORM_VERSION)_$(KAT_BUILD_NUMBER)"
+
+ifeq ($(BOOTANIMATION_RESOLUTION), KatKiss)
+PRODUCT_COPY_FILES += \
+    vendor/kat/bootanimations/KatKiss.zip:system/media/bootanimation.zip
 endif
-
-#### Goo Manager support
-## If EOS_RELEASE is not defined by the user, assume the build is a nightly release.
-## If EOS_RELEASE is defined, use the environment variable EOS_RELEASE_GOOBUILD as the build number.
-PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.goo.developerid=teameos \
-#    ro.goo.board=$(subst full_,,$(TARGET_PRODUCT)) \
-
-#ifeq ($(EOS_RELEASE),)
-#	PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.rom=eosJB42Nightlies \
-	ro.goo.version=$(shell date +%s)
-#else
-#	PRODUCT_PROPERTY_OVERRIDES += \
-	ro.goo.rom=eos \
-	ro.goo.version=$(EOS_RELEASE_GOOBUILD)
-#endif
-
-$(call inherit-product, vendor/eos/bootanimations/bootanimation.mk)
