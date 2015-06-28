@@ -67,5 +67,6 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Inherit sabermod vendor
+USE_LEGACY_GCC := true #Sabermod use 4.6 GCC for HOST build
 SM_VENDOR := vendor/sm
 include $(SM_VENDOR)/Main.mk
