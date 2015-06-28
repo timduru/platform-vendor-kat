@@ -65,3 +65,7 @@ ifeq ($(BOOTANIMATION_RESOLUTION), KatKiss)
 PRODUCT_COPY_FILES += \
     vendor/kat/bootanimations/KatKiss.zip:system/media/bootanimation.zip
 endif
+
+# Inherit sabermod vendor
+SM_VENDOR := vendor/sm
+include $(SM_VENDOR)/Main.mk
