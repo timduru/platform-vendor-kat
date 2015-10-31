@@ -21,7 +21,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 PRODUCT_PACKAGES += \
     TerminalEmulator \
-    SuperSU \
     thtt \
     ntfs-3g.probe \
     ntfsfix \
@@ -41,6 +40,7 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     mkfs.exfat \
     busybox \
+    org.apache.http.legacy \
     #ssh-keygen
     #powertop \
     #ControlCenter \
