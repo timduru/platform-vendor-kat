@@ -49,6 +49,9 @@ PRODUCT_PACKAGES += \
     #ThemeChooser \
     #ThemeManager \
 
+PRODUCT_PACKAGES += libkatcam \
+ 		libkatomx \
+
 PRODUCT_COPY_FILES += \
     vendor/kat/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
 
