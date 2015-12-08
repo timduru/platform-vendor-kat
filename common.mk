@@ -39,8 +39,10 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mount.exfat \
     mkfs.exfat \
+    mkntfs \
     busybox \
     org.apache.http.legacy \
+    #LauncherLayout \
     #ssh-keygen
     #powertop \
     #ControlCenter \
@@ -52,8 +54,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += libkatcam \
  		libkatomx \
 
-PRODUCT_COPY_FILES += \
-    vendor/kat/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+#PRODUCT_COPY_FILES += \
+#    vendor/kat/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
 
 #Bring in camera media effects
 $(call inherit-product-if-exists, frameworks/base/data/videos/VideoPackage2.mk)
