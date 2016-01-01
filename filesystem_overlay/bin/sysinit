@@ -2,6 +2,9 @@
 
 DIR="/system/etc/init.d";
 FILELIST=`ls /system/etc/init.d`
+/system/bin/sysrw
+chmod 755 $DIR/*
+/system/bin/sysro
 
 for FILE in $FILELIST ; do
         FILENAME=${DIR}/$FILE
@@ -25,5 +28,4 @@ for FILE in $FILELIST ; do
 done
 
 sync;
-setprop eos.filesystem.ready 1;
 
