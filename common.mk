@@ -61,7 +61,7 @@ PRODUCT_PACKAGES += libkatcam \
 $(call inherit-product-if-exists, frameworks/base/data/videos/VideoPackage2.mk)
 
 $(call inherit-product-if-exists, vendor/kat/filesystem_overlay/overlay.mk)
-DEVICE_PACKAGE_OVERLAYS += vendor/kat/resource_overlay
+#DEVICE_PACKAGE_OVERLAYS += vendor/kat/resource_overlay
 
     PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_DISPLAY_ID="$(BUILD_ID) KatKiss-$(PLATFORM_VERSION)_$(KAT_BUILD_NUMBER)"
