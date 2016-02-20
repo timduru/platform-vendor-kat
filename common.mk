@@ -21,6 +21,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 PRODUCT_PACKAGES += \
     TerminalEmulator \
+    BookmarksSyncAdapter \
     thtt \
     ntfs-3g.probe \
     ntfsfix \
