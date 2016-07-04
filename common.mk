@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2011-2016 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,8 +26,6 @@ PRODUCT_PACKAGES += \
     ntfs-3g.probe \
     ntfsfix \
     ntfs-3g \
-    PhaseBeam \
-    HoloSpiral \
     fstrim \
     libnl \
     iw \
@@ -42,27 +40,12 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     mkntfs \
     busybox \
-    org.apache.http.legacy \
-    #LauncherLayout \
-    #ssh-keygen
-    #powertop \
-    #ControlCenter \
-    #Trebuchet \
-    #com.tmobile.themes \
-    #ThemeChooser \
-    #ThemeManager \
+    org.apache.http.legacy
 
 PRODUCT_PACKAGES += libkatcam \
- 		libkatomx \
-
-#PRODUCT_COPY_FILES += \
-#    vendor/kat/proprietary/terminalemulator/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
-
-#Bring in camera media effects
-$(call inherit-product-if-exists, frameworks/base/data/videos/VideoPackage2.mk)
+ 		libkatomx
 
 $(call inherit-product-if-exists, vendor/kat/filesystem_overlay/overlay.mk)
-#DEVICE_PACKAGE_OVERLAYS += vendor/kat/resource_overlay
 
     PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_DISPLAY_ID="$(BUILD_ID) KatKiss-$(PLATFORM_VERSION)_$(KAT_BUILD_NUMBER)"
