@@ -17,7 +17,7 @@
 # This file includes all definitions that apply to ALL builds
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.adb.secure=0
+    ro.adb.secure=1
 
 PRODUCT_PACKAGES += \
     TerminalEmulator \
