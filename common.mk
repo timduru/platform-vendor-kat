@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     mkfs.exfat \
     mkntfs \
-    busybox
+    busybox \
+    org.apache.http.legacy
 
 PRODUCT_PACKAGES += libkatcam \
  		libkatomx
