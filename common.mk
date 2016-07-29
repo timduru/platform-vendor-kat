@@ -39,8 +39,7 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     mkfs.exfat \
     mkntfs \
-    busybox \
-    org.apache.http.legacy
+    busybox
 
 PRODUCT_PACKAGES += libkatcam \
  		libkatomx
@@ -54,6 +53,8 @@ ifeq ($(BOOTANIMATION_RESOLUTION), KatKiss)
 PRODUCT_COPY_FILES += \
     vendor/kat/bootanimations/KatKiss.zip:system/media/bootanimation.zip
 endif
+PRODUCT_COPY_FILES += \
+    prebuilts/sdk/org.apache.http.legacy/org.apache.http.legacy.jar:system/framework/org.apache.http.legacy.jar
 
 # Inherit sabermod vendor
 USE_LEGACY_GCC := true #Sabermod use 4.6 GCC for HOST build
