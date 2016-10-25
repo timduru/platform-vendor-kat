@@ -6,7 +6,6 @@ PRODUCT_COPY_FILES += \
     vendor/kat/filesystem_overlay/bin/rootrw:system/bin/rootrw \
     vendor/kat/filesystem_overlay/bin/rootro:system/bin/rootro \
     vendor/kat/filesystem_overlay/etc/init.d/01_kernel_controls:system/etc/init.d/01_kernel_controls \
-    vendor/kat/filesystem_overlay/etc/init.d/02_privacy_controls:system/etc/init.d/02_privacy_controls \
     vendor/kat/filesystem_overlay/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/kat/filesystem_overlay/media/PFFprec_600.emd:system/media/PFFprec_600.emd \
     vendor/kat/filesystem_overlay/init.kat.rc:root/init.kat.rc \

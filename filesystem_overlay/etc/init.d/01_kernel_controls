@@ -3,7 +3,7 @@
 # ZRAM allocate 10% of device memory
 # credit Imoseyon
 
-if [ -e /data/data/com.android.settings/app_kk/zram_on_boot ]; then
+if [ -e /data/user_de/0/com.android.settings/app_kk/zram_on_boot ]; then
     RAMSIZE=`grep MemTotal /proc/meminfo | awk '{ print \$2 }'`
     ZRAMSIZE=$(($RAMSIZE*100))
 
@@ -29,7 +29,7 @@ for cpu in 0 1 2 3; do
 done
 
 
-if [ -e /data/data/com.android.settings/app_kk/clocks_on_boot ]; then
+if [ -e /data/user_de/0/com.android.settings/app_kk/clocks_on_boot ]; then
     thtt /data/local/kk_clocking
     TEST_VALUE=$?
 
@@ -38,21 +38,21 @@ if [ -e /data/data/com.android.settings/app_kk/clocks_on_boot ]; then
 	log -t overclocking 'values not applied due to recent reboot'
     else
 
-        if [ -e /data/data/com.android.settings/app_kk/clocks_max ]; then
+        if [ -e /data/user_de/0/com.android.settings/app_kk/clocks_max ]; then
 	for cpu in 0 1 2 3; do
-                cat /data/data/com.android.settings/app_kk/clocks_max > /sys/devices/system/cpu/cpu$cpu/cpufreq/scaling_max_freq
+                cat /data/user_de/0/com.android.settings/app_kk/clocks_max > /sys/devices/system/cpu/cpu$cpu/cpufreq/scaling_max_freq
 	done
         fi
 
-	if [ -e /data/data/com.android.settings/app_kk/clocks_min ]; then
+	if [ -e /data/user_de/0/com.android.settings/app_kk/clocks_min ]; then
 	for cpu in 0 1 2 3; do
-		cat /data/data/com.android.settings/app_kk/clocks_min > /sys/devices/system/cpu/cpu$cpu/cpufreq/scaling_min_freq
+		cat /data/user_de/0/com.android.settings/app_kk/clocks_min > /sys/devices/system/cpu/cpu$cpu/cpufreq/scaling_min_freq
 	done
 	fi
 
-        if [ -e /data/data/com.android.settings/app_kk/clocks_gov ]; then
+        if [ -e /data/user_de/0/com.android.settings/app_kk/clocks_gov ]; then
 	for cpu in 0 1 2 3; do
-                cat /data/data/com.android.settings/app_kk/clocks_gov > /sys/devices/system/cpu/cpu$cpu/cpufreq/scaling_governor
+                cat /data/user_de/0/com.android.settings/app_kk/clocks_gov > /sys/devices/system/cpu/cpu$cpu/cpufreq/scaling_governor
 	done
         fi
 
