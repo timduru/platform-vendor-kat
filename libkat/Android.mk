@@ -16,3 +16,11 @@ LOCAL_SRC_FILES := libkatomx.c
 LOCAL_MODULE := libkatomx
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_SHARED_LIBRARIES := libicuuc libicui18n libcutils
+LOCAL_SRC_FILES := icu.c
+LOCAL_MODULE := libkaticu
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_SHARED_LIBRARY)
