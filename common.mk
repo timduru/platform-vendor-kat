@@ -57,6 +57,6 @@ PRODUCT_COPY_FILES += \
     prebuilts/sdk/org.apache.http.legacy/org.apache.http.legacy.jar:system/framework/org.apache.http.legacy.jar
 
 # Inherit sabermod vendor
-USE_LEGACY_GCC := true #Sabermod use 4.6 GCC for HOST build
-SM_VENDOR := vendor/sm
-include $(SM_VENDOR)/Main.mk
+#USE_LEGACY_GCC := true #Sabermod use 4.6 GCC for HOST build
+#SM_VENDOR := vendor/sm
+#include $(SM_VENDOR)/Main.mk
