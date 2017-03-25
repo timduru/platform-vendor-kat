@@ -11,6 +11,7 @@ if [ -e /data/user_de/0/com.android.settings/app_kk/zram_on_boot ]; then
     /system/xbin/mkswap /dev/block/zram0 && \
     /system/xbin/swapon /dev/block/zram0 && \
     echo "500,1000,20000,20000,20000,25000" > /sys/module/lowmemorykiller/parameters/minfree
+    /system/bin/sysctl -w vm.swappiness=40
 fi
 
 # frequency control
